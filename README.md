@@ -62,14 +62,22 @@ Core Expansion - это комплексный плагин для Minecraft, к
 
 ```yaml
 # Пример конфигурации
-механики:
-  фейерверк_арбалет:
-    включено: true
-    мощность: 1.5
-    
-  тотемы:
-    включено: true
-    шанс_выпадения: 0.05
+mechanics:
+  firework_boost:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    power: 1.0  # Upward boost strength (1.0 - default, 2.0 - twice as strong)
+    work_on_air: false  # Work in air (false - only when clicking a block, true - works always)
+    cancel_original_behavior: true  # Cancel default firework behavior (true - firework doesn't place, only boosts)
+
+  # Mechanic: Recoil from firework shot from a crossbow
+  firework_crossbow:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    upward_threshold: 0.5  # Threshold for detecting upward shot (0.5 - above 45 degrees upward)
+    upward_multiplier: 2.0  # Upward boost strength when shooting upward
+    backward_multiplier: -0.5  # Backward recoil strength when shooting upward (negative - pushes back)
+    downward_force: -5.0  # Additional downward force (negative - pulls down)
+    horizontal_multiplier: -2.0  # Recoil strength when shooting sideways or downward
+    cancel_firework_launch: false  # Cancel firework launch (true - firework doesn't launch, only recoil)
 ```
 
 **Доступные настройки:**
