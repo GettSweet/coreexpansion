@@ -1,0 +1,9 @@
+name: CoreExpansion
+version: '0.2-beta'
+main: getsweet.coreExpansion.Core
+api-version: '1.21'
+prefix: CoreExpansion
+load: STARTUP
+authors: [ GetSweet ]
+description: Dozens of new mechanics that change the usual minecraft.
+website: https://discord.gg/BqUYJ3KGFd

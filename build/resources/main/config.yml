@@ -1,0 +1,64 @@
+# PLUGIN SETTINGS - READ THE COMMENTS!
+
+mechanics:
+  # Mechanic: Firework boost when holding a firework
+  firework_boost:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    power: 1.0  # Upward boost strength (1.0 - default, 2.0 - twice as strong)
+    work_on_air: false  # Work in air (false - only when clicking a block, true - works always)
+    cancel_original_behavior: true  # Cancel default firework behavior (true - firework doesn't place, only boosts)
+
+  # Mechanic: Recoil from firework shot from a crossbow
+  firework_crossbow:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    upward_threshold: 0.5  # Threshold for detecting upward shot (0.5 - above 45 degrees upward)
+    upward_multiplier: 2.0  # Upward boost strength when shooting upward
+    backward_multiplier: -0.5  # Backward recoil strength when shooting upward (negative - pushes back)
+    downward_force: -5.0  # Additional downward force (negative - pulls down)
+    horizontal_multiplier: -2.0  # Recoil strength when shooting sideways or downward
+    cancel_firework_launch: false  # Cancel firework launch (true - firework doesn't launch, only recoil)
+
+  # Mechanic: Totem drop from evoker
+  totem_drop:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    drop_chance: 0.004  # Chance of totem drop (0.4%)
+
+  # Mechanic: Display information in ActionBar
+  action_bar:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    update_interval: 1  # ActionBar update interval (in ticks, 1 tick = 0.05 sec)
+    random_coordinates_range: 50001  # Range for random coordinates in the Nether (-25000 to 25000)
+    random_coordinates_y_max: 256  # Maximum Y height for random coordinates
+
+  # Mechanic: Launch fireball using fire charge
+  fireball_thrower:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    velocity_multiplier: 2.0  # Fireball velocity multiplier
+    incendiary: false  # Sets blocks on fire (true - yes, false - no)
+    yield: 0.0  # Explosion yield (0 - no destruction)
+
+  # Mechanic: Effects on fall damage
+  fall_damage:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    effect_chance: 0.3  # Chance of applying effects (30%)
+    darkness_duration: 100  # Duration of darkness effect (in ticks, 100 = 5 sec)
+    darkness_amplifier: 1  # Amplifier level for darkness effect
+    slowness_duration: 100  # Duration of slowness effect (in ticks)
+    slowness_amplifier: 1  # Amplifier level for slowness effect
+
+  # Mechanic: Effects when hitting a shield with an axe
+  shield_hit:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    slowness_duration: 40  # Duration of slowness effect (in ticks, 40 = 2 sec)
+    slowness_amplifier: 2  # Amplifier level for slowness effect
+
+  # Mechanic: Create paths when a player moves
+  path_creator:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    path_chance: 0.01  # Chance of creating a path (1%)
+
+  # Mechanic: Replace skeleton's bow with a sword
+  skeleton_spawn:
+    enabled: true  # Enable or disable this mechanic (true - enabled, false - disabled)
+    sword_chance: 0.3  # Chance of replacing bow with sword (30%)
+    sword_material: IRON_SWORD  # Material of the sword
